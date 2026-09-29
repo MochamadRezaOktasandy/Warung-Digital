@@ -40,7 +40,7 @@
 
 ## 🛠️ Tech Stack
 
-* **Backend Framework:** Laravel 11.x (PHP 8.2+)
+* **Backend Framework:** Laravel 13.x (PHP 8.3+)
 * **Database:** MySQL / MariaDB / SQLite
 * **Frontend State Management:** Alpine.js 3.x (with `@alpinejs/persist`)
 * **Styling & Icons:** Tailwind CSS 3.x, Lucide Icons
@@ -58,13 +58,13 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek di lingkungan pengembanga
 git clone [https://github.com/MochamadRezaOktasandy/warungdigital.git](https://github.com/MochamadRezaOktasandy/warungdigital.git)
 cd warungdigital
 
-### 2. Instalasi Dependensi PHP & Node
-```bash
+2. Instalasi Dependensi PHP & Node
+
 composer install
 npm install
 
-### 3. Konfigurasi Environment (.env)
-```bash
+3. Konfigurasi Environment (.env)
+
 cp .env.example .env
 
 Sesuaikan konfigurasi basis data Anda di file .env:
@@ -75,17 +75,17 @@ DB_DATABASE=warungdigital
 DB_USERNAME=root
 DB_PASSWORD=
 
-### 4. Generate Application Key & Symlink Storage
-```bash
+ 4. Generate Application Key & Symlink Storage
+
 php artisan key:generate
 php artisan storage:link
 
-### 5. Eksekusi Migrasi & Data Awal
-```bash
+5. Eksekusi Migrasi & Data Awal
+
 php artisan migrate --seed
 
-### 6. Menjalankan Server Lokal
-```bash
+6. Menjalankan Server Lokal
+
 php artisan serve
 
 Peran (Role),Akses Fitur:
