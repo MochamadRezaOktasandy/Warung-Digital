@@ -1,6 +1,6 @@
 # 🏪 WarungDigital - Hybrid POS & Online Store UMKM
 
-[![Laravel](https://img.shields.io/badge/Laravel-11.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-13.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
 [![Alpine.js](https://img.shields.io/badge/Alpine.js-3.x-8BC0D0?style=for-the-badge&logo=alpinedotjs&logoColor=black)](https://alpinejs.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 [![Midtrans](https://img.shields.io/badge/Payment-Midtrans_QRIS-002855?style=for-the-badge)](https://midtrans.com)
@@ -49,22 +49,33 @@
 
 ---
 
+## 👥 Hak Akses & Peran Pengguna
+
+| Peran (Role) | Akses Fitur |
+| :--- | :--- |
+| **Admin (Pemilik Usaha)** | Akses penuh: Transaksi Kasir, Update Status Pesanan, Hapus Transaksi, Cetak Struk, Manajemen Produk & Kategori, Pembukuan Kas & Laba Rugi, serta Pengaturan Toko, Branding, dan QRIS. |
+| **Karyawan / Kasir** | Akses operasional: Layar POS Kasir, Akses Daftar Antrean Pesanan, Pembaruan Status Kerja (`processing` → `completed`), dan Cetak Struk Belanja. |
+
+---
+
 ## 🚀 Panduan Instalasi Lokal
 
 Ikuti langkah-langkah berikut untuk menjalankan proyek di lingkungan pengembangan lokal:
 
 ### 1. Kloning Repositori
 ```bash
-git clone [https://github.com/MochamadRezaOktasandy/warungdigital.git](https://github.com/MochamadRezaOktasandy/warungdigital.git)
-cd warungdigital
+git clone https://github.com/MochamadRezaOktasandy/Warung-Digital.git
+cd Warung-Digital
+```
 
-2. Instalasi Dependensi PHP & Node
-
+### 2. Instalasi Dependensi PHP & Node
+```bash
 composer install
 npm install
+```
 
-3. Konfigurasi Environment (.env)
-
+### 3. Konfigurasi Environment (.env)
+```bash
 cp .env.example .env
 
 Sesuaikan konfigurasi basis data Anda di file .env:
@@ -74,25 +85,41 @@ DB_PORT=3306
 DB_DATABASE=warungdigital
 DB_USERNAME=root
 DB_PASSWORD=
+```
 
- 4. Generate Application Key & Symlink Storage
-
+### 4. Generate Application Key & Symlink Storage
+```bash
 php artisan key:generate
 php artisan storage:link
+```
 
-5. Eksekusi Migrasi & Data Awal
-
+### 5. Eksekusi Migrasi & Data Awal
+```bash
 php artisan migrate --seed
+```
 
-6. Menjalankan Server Lokal
-
+### 6. Menjalankan Server Lokal
+```bash
 php artisan serve
+```
 
-Peran (Role),Akses Fitur:
+## 👥 Hak Akses & Peran Pengguna
 
-Admin (Pemilik Usaha),"Akses penuh: Transaksi Kasir, Update Status Pesanan, Hapus Transaksi, Cetak Struk, Manajemen Produk & Kategori, Pembukuan Kas & Laba Rugi, serta Pengaturan Toko, Branding, dan QRIS."
+* **Admin (Pemilik Usaha):**
+  * Akses penuh ke seluruh fitur sistem.
+  * Transaksi Kasir, Update Status Pesanan, Hapus Transaksi, dan Cetak Struk.
+  * Manajemen Produk & Kategori.
+  * Pembukuan Kas & Laba Rugi.
+  * Pengaturan Toko, Branding, dan QRIS.
 
-Karyawan / Kasir,"Akses operasional: Layar POS Kasir, Akses Daftar Antrean Pesanan, Pembaruan Status Kerja (processing → completed), dan Cetak Struk Belanja."
+* **Karyawan / Kasir:**
+  * Akses operasional toko harian.
+  * Layar POS Kasir & Cetak Struk Belanja.
+  * Akses Daftar Antrean Pesanan.
+  * Pembaruan Status Kerja (`processing` → `completed`).
 
-📄 Lisensi
-Proyek ini dilisensikan di bawah MIT License. Bebas digunakan, dimodifikasi, dan didistribusikan untuk mendukung digitalisasi UMKM.
+---
+
+## 📄 Lisensi
+
+Proyek ini dilisensikan di bawah [MIT License](LICENSE). Bebas digunakan, dimodifikasi, dan didistribusikan untuk mendukung digitalisasi UMKM.
