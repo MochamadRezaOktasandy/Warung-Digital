@@ -40,7 +40,7 @@
 
 ## 🛠️ Tech Stack
 
-* **Backend Framework:** Laravel 13.x (PHP 8.3+)
+* **Backend Framework:** Laravel 13.x (PHP 8.5+)
 * **Database:** MySQL / MariaDB / SQLite
 * **Frontend State Management:** Alpine.js 3.x (with `@alpinejs/persist`)
 * **Styling & Icons:** Tailwind CSS 3.x, Lucide Icons
